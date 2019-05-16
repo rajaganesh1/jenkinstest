@@ -11,7 +11,7 @@ pipeline {
                 //echo 'Sonar Scanner'
                	//def scannerHome = tool 'SonarQube Scanner 3.0'
 			    //withSonarQubeEnv {
-					sh 'mvn sonar:sonar'
+					sh 'mvn sonar:sonar -Dsonar.host.url=http://10.177.168.44:9000'
 					//}
 	    }
         }
