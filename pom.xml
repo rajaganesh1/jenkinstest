@@ -12,8 +12,12 @@
 	<description>Project for Spring Boot Jenkins</description>
 	
 	<distributionManagement>
+		<repository>
+        <id>maven-releases</id>
+        <url>http://10.177.168.44:8081/nexus/content/repositories/releases</url>
+    </repository>
    <snapshotRepository>
-      <id>nexus-snapshots</id>
+      <id>maven-snapshots</id>
       <url>http://10.177.168.44:8081/nexus/content/repositories/snapshots</url>
    </snapshotRepository>
 </distributionManagement>
