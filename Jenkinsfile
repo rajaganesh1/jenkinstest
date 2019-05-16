@@ -42,7 +42,7 @@ pipeline {
         }
         stage('Publish to Nexus') {
             steps {
-                echo '## TODO DEPLOYMENT ##'
+                sh 'mvn deploy'
             }
         }
     }
