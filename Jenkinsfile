@@ -11,7 +11,7 @@ pipeline {
                 //echo 'Sonar Scanner'
                	//def scannerHome = tool 'SonarQube Scanner 3.0'
 			    //withSonarQubeEnv {
-					sh 'gradle clean sonarqube'
+					sh 'gradle sonarqube'
 					//}
 	    }
         }
