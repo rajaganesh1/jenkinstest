@@ -26,11 +26,11 @@ pipeline {
         }
         stage('Sonar') {
             steps {
-                echo 'Sonar Scanner'
+                //echo 'Sonar Scanner'
                	//def scannerHome = tool 'SonarQube Scanner 3.0'
-			    withSonarQubeEnv {
+			    //withSonarQubeEnv {
 					sh "./gradlew clean sonarqube"
-					}
+					//}
             }
         }
         stage('Package') {
