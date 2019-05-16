@@ -9,13 +9,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Clean Build'
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing'
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
         stage('JaCoCo') {
@@ -29,14 +29,14 @@ pipeline {
                 //echo 'Sonar Scanner'
                	//def scannerHome = tool 'SonarQube Scanner 3.0'
 			    //withSonarQubeEnv {
-					sh "./gradlew clean sonarqube"
+					sh 'gradlew clean sonarqube'
 					//}
             }
         }
         stage('Package') {
             steps {
                 echo 'Packaging'
-                bat 'mvn package -DskipTests'
+                sh 'mvn package -DskipTests'
             }
         }
         stage('Deploy') {
