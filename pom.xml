@@ -13,8 +13,8 @@
 	
 	<distributionManagement>
 		<repository>
-        <id>maven-releases</id>
-        <url>http://10.177.168.44:8081/nexus/content/repositories/maven-releases</url>
+        <id>libs-snapshots</id>
+        <url>http://10.177.168.44:8081/repository/libs-snapshots</url>
     </repository>
    <snapshotRepository>
       <id>maven-snapshots</id>
