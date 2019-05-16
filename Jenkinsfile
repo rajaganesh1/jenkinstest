@@ -6,6 +6,15 @@ pipeline {
                 echo 'Checkout'
             }
         }
+	stage('Sonar') {
+            steps {
+                //echo 'Sonar Scanner'
+               	//def scannerHome = tool 'SonarQube Scanner 3.0'
+			    //withSonarQubeEnv {
+					sh 'gradlew clean sonarqube'
+					//}
+	    }
+        }
         stage('Build') {
             steps {
                 echo 'Clean Build'
@@ -24,15 +33,7 @@ pipeline {
                // jacoco()
             //}
        // }
-        stage('Sonar') {
-            steps {
-                //echo 'Sonar Scanner'
-               	//def scannerHome = tool 'SonarQube Scanner 3.0'
-			    //withSonarQubeEnv {
-					sh 'gradlew clean sonarqube'
-					//}
-            }
-        }
+        
         stage('Package') {
             steps {
                 echo 'Packaging'
