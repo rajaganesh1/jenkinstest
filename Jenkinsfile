@@ -1,7 +1,6 @@
 pipeline {
-    node('Pipeline_node_Virtualbox') {
-   // Will run on the slave with name or tag specialSlave
-}
+	agent {label 'pipeline-node'}
+		
     stages {
         stage('Checkout') {
             steps {
@@ -48,6 +47,7 @@ pipeline {
             }
         }
     }
+	}
     
     post {
         always {
