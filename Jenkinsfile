@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    node('Pipeline_node_Virtualbox') {
+   // Will run on the slave with name or tag specialSlave
+}
     stages {
         stage('Checkout') {
             steps {
