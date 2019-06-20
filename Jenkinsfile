@@ -66,4 +66,3 @@ pipeline {
             echo 'JENKINS PIPELINE STATUS HAS CHANGED SINCE LAST EXECUTION'
         }
     }
-}
