@@ -5,7 +5,7 @@
 
 	<groupId>org.jenkinstest</groupId>
 	<artifactId>springboot</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-${timestamp}</version>
 	<packaging>jar</packaging>
 
 	<name>springboot</name>
@@ -33,6 +33,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<timestamp>${maven.build.timestamp}</timestamp>
+                <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 
 	<dependencies>
