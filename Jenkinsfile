@@ -48,7 +48,7 @@ stages {
         stage('Publish to Nexus') {
             steps {
                echo 'Uploading Artifacts to Nexus'
-                sh 'mvn deploy' 
+                sh 'mvn -e -X deploy' 
 	    }
             }
         }
