@@ -12,10 +12,14 @@
 	<description>Project for Spring Boot Jenkins</description>
 	
 	<distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://10.177.168.44:8081/nexus/content/repositories/snapshots</url>
-   </snapshotRepository>
+    <repository>
+        <id>Releases</id>
+        <url>http://10.177.168.44:8081/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+        <id>Snapshots</id>
+        <url>http://10.177.168.44:8081/content/repositories/snapshots</url>
+    </snapshotRepository>
 </distributionManagement>
 
 	<parent>
