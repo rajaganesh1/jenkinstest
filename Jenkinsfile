@@ -47,21 +47,8 @@ stages {
         }
         stage('Publish to Nexus') {
             steps {
-              nexusArtifactUploader(
-   	       nexusVersion: 'nexus3',
-    	       protocol: 'http',
-               nexusUrl: '10.177.168.44:8081/nexus',
-               groupId: 'com.artifact',
-               version: 0.1,
-               repository: 'jenkins-maven',
-               credentialsId: 'NEXUS_CREDENTIAL_ID',
-          artifacts: [
-              [artifactId: projectName,
-              classifier: '',
-              file: 'springboot-0.0.1.jar',
-              type: 'jar']
-    ]
- )  
+               echo 'Uploading Artifacts to Nexus'
+                sh 'mvn deploy' 
 	    }
             }
         }
